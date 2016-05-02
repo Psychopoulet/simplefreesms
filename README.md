@@ -14,8 +14,7 @@ $ npm install simplefreesms
 
 ## Doc
 
-   * static staticSend(string login, string secretKey, string message) // return Promise
-
+   * static sendStatic(string login, string secretKey, string message) // return Promise
    * login(string login) // return this
    * key(string secretKey) // return this
    * send(string message) // return Promise
@@ -29,7 +28,7 @@ $ npm install simplefreesms
 const SMS = require('simplefreesms');
 
 // send message without object instanciation
-SMS.staticSend('XXXXXXXX', 'XXXXXXXXXXXXXX', 'message').then(function() {
+SMS.sendStatic('XXXXXXXX', 'XXXXXXXXXXXXXX', 'message').then(function() {
    console.log('sended');
 }).catch(function(err) {
    console.log(err);
